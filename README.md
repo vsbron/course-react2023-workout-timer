@@ -5,6 +5,7 @@ Small App that lets you calculate how much time you need for your workout
 ## Features
 
 - The calculator for a planned workout;
+- Ability to manually adjust workout time;
 
 ## Details
 
