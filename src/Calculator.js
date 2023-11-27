@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import clickSound from "./ClickSound.m4a";
 
 function Calculator({ workouts, allowSound }) {
+  // Initializing state variables
   const [number, setNumber] = useState(workouts.at(0).numExercises);
   const [sets, setSets] = useState(3);
   const [speed, setSpeed] = useState(90);
   const [durationBreak, setDurationBreak] = useState(5);
 
+  // Initializing derived state variables
   const duration = (number * sets * speed) / 60 + (sets - 1) * durationBreak;
   const mins = Math.floor(duration);
   const seconds = (duration - mins) * 60;
 
+  // Play sound function
   const playSound = function () {
     if (!allowSound) return;
     const sound = new Audio(clickSound);
@@ -78,4 +81,5 @@ function Calculator({ workouts, allowSound }) {
   );
 }
 
-export default Calculator;
+// Export memoized component
+export default memo(Calculator);

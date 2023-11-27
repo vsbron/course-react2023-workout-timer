@@ -4,11 +4,11 @@ Small App that lets you calculate how much time you need for your workout
 
 ## Features
 
-- The calculator for a planned workout
+- The calculator for a planned workout;
 
 ## Details
 
--
+- Memoization is used to boost performance;
 
 ## Live version
 

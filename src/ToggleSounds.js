@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 function ToggleSounds({ allowSound, setAllowSound }) {
   return (
     <button
@@ -9,4 +11,5 @@ function ToggleSounds({ allowSound, setAllowSound }) {
   );
 }
 
-export default ToggleSounds;
+// Export memoized component
+export default memo(ToggleSounds);
