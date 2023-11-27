@@ -31,6 +31,14 @@ function Calculator({ workouts, allowSound }) {
     [duration, allowSound]
   );
 
+  // Page title update effect
+  useEffect(
+    function () {
+      document.title = `Your ${number}-exercise workout`;
+    },
+    [number]
+  );
+
   // Helper functions
   const decreaseDuration = () => {
     duration > 0 && setDuration((d) => Math.ceil(d) - 1);
